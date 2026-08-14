@@ -10,3 +10,9 @@ services:
       - "8080:8080"
     volumes:
       - "./stremio-data:/root/.stremio-server"
+    networks:
+      - ondemand
+
+networks:
+  ondemand:
+    external: true
