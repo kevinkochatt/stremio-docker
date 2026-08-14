@@ -4,8 +4,8 @@ services:
     restart: unless-stopped
     environment:
       NO_CORS: 1
-      AUTO_SERVER_URL: 1
-      #IPADDRESS: 192.168.1.10 # Setup your ip address here
+      AUTO_SERVER_URL: 0
+      SERVER_URL: https://stremioservice.kevinkochatt.com
     ports:
       - "8080:8080"
     volumes:
