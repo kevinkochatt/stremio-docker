@@ -18,9 +18,11 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
     ports:
-      - "8085:8080"
+      - "8080:8080"
     volumes:
-      - "./stremio-data:/root/.stremio-server"
+      - ./stremio-data:/root/.stremio-server
+      - /usr/lib/wsl/lib/libnvcuvid.so.1:/usr/lib/x86_64-linux-gnu/libnvcuvid.so.1:ro
+      - /usr/lib/wsl/lib/libnvidia-encode.so.1:/usr/lib/x86_64-linux-gnu/libnvidia-encode.so.1:ro
     deploy:
       resources:
         limits:
