@@ -12,7 +12,9 @@ services:
       - "./stremio-data:/root/.stremio-server"
     networks:
       - ondemand
-
+    labels:
+      caddy: stremio.kevinkochatt.com
+      caddy.reverse_proxy: "{{upstreams 8080}}"
 networks:
   ondemand:
     external: true
