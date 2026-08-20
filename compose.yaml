@@ -13,7 +13,7 @@ services:
     networks:
       - ondemand
     labels:
-      caddy: stremioservice.kevinkochatt.com
+      caddy: stremio.kevinkochatt.com
       caddy.reverse_proxy: "{{upstreams 8080}}"
 networks:
   ondemand:
